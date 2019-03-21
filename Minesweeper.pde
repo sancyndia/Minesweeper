@@ -3,7 +3,7 @@
 import de.bezier.guido.*;
 public final static int NUM_ROWS = 20; 
 public final static int NUM_COLS = 20;
-public final static int NUM_BOMBS = 100; 
+public final static int NUM_BOMBS = 1; 
 private MSButton[][] buttons; //2d array of minesweeper buttons
 private ArrayList <MSButton> bombs = new ArrayList <MSButton> (); //ArrayList of just the minesweeper buttons that are mined
 
@@ -61,6 +61,11 @@ public boolean isWon()
 public void displayLosingMessage()
 {
     background(255);
+    for(int r = 0; r < NUM_ROWS; r++)
+        for(int c = 0; c < NUM_COLS; c++){
+            buttons[r][c].setLabel(" ");
+            buttons[r][c].clicked = true;
+         }   
     buttons[9][8].setLabel("Y");
     buttons[9][9].setLabel("O");
     buttons[9][10].setLabel("U");
@@ -68,18 +73,23 @@ public void displayLosingMessage()
     buttons[10][9].setLabel("O");
     buttons[10][10].setLabel("S");
     buttons[10][11].setLabel("E");
-    exit();
+    noLoop();
 }
 public void displayWinningMessage()
 {
     background(255);
+    for(int r = 0; r < NUM_ROWS; r++)
+        for(int c = 0; c < NUM_COLS; c++){
+            buttons[r][c].setLabel(" ");
+            buttons[r][c].clicked = true;
+         }   
     buttons[9][8].setLabel("Y");
     buttons[9][9].setLabel("O");
     buttons[9][10].setLabel("U");
     buttons[10][8].setLabel("W");
     buttons[10][9].setLabel("I");
     buttons[10][10].setLabel("N");
-    exit();
+    noLoop();
 }
 
 public class MSButton
