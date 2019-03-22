@@ -59,7 +59,6 @@ public boolean isWon()
 }
 public void displayLosingMessage()
 {
-    background(255);
     for(int r = 0; r < NUM_ROWS; r++)
         for(int c = 0; c < NUM_COLS; c++){
             buttons[r][c].setLabel(" ");
@@ -76,7 +75,6 @@ public void displayLosingMessage()
 }
 public void displayWinningMessage()
 {
-    background(255);
     for(int r = 0; r < NUM_ROWS; r++)
         for(int c = 0; c < NUM_COLS; c++){
             buttons[r][c].setLabel(" ");
