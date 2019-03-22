@@ -59,11 +59,7 @@ public boolean isWon()
 }
 public void displayLosingMessage()
 {
-    for(int r = 0; r < NUM_ROWS; r++)
-        for(int c = 0; c < NUM_COLS; c++){
-            buttons[r][c].setLabel(" ");
-            buttons[r][c].clicked = true;
-         }   
+      
     buttons[9][8].setLabel("Y");
     buttons[9][9].setLabel("O");
     buttons[9][10].setLabel("U");
@@ -71,22 +67,18 @@ public void displayLosingMessage()
     buttons[10][9].setLabel("O");
     buttons[10][10].setLabel("S");
     buttons[10][11].setLabel("E");
-    noLoop();
+    //noLoop();
 }
 public void displayWinningMessage()
 {
-    for(int r = 0; r < NUM_ROWS; r++)
-        for(int c = 0; c < NUM_COLS; c++){
-            buttons[r][c].setLabel(" ");
-            buttons[r][c].clicked = true;
-         }   
+    
     buttons[9][8].setLabel("Y");
     buttons[9][9].setLabel("O");
     buttons[9][10].setLabel("U");
     buttons[10][8].setLabel("W");
     buttons[10][9].setLabel("I");
     buttons[10][10].setLabel("N");
-    noLoop();
+    //noLoop();
 }
 
 public class MSButton
